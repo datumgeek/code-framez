@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "../../dist/apps/demo"
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "references": [
+    { "path": "../../libs/core/types" },
+    { "path": "../../libs/core/auth-types" },
+    { "path": "../../libs/react/state" },
+    { "path": "../../libs/react/view-host" },
+    { "path": "../../libs/react-material/pane" },
+    { "path": "../../libs/react-material/entity-menu" },
+    { "path": "../../libs/react-material/shell" },
+    { "path": "../../libs/auth/react" }
+  ]
+}
