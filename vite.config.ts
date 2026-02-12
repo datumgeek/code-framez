@@ -5,6 +5,7 @@ import path from 'path';
 export default defineConfig({
   plugins: [react()],
   root: 'apps/demo',
+  base: process.env.GITHUB_ACTIONS ? '/code-framez/' : '/',
   resolve: {
     alias: {
       '@code-framez/core/types': path.resolve(__dirname, 'libs/core/types/src/index.ts'),
