@@ -22,6 +22,7 @@
       "@code-framez/core/*": ["libs/core/*/src/index.ts"],
       "@code-framez/react/*": ["libs/react/*/src/index.ts"],
       "@code-framez/react-material/*": ["libs/react-material/*/src/index.ts"],
+      "@code-framez/react-daisyui/*": ["libs/react-daisyui/*/src/index.ts"],
       "@code-framez/auth/*": ["libs/auth/*/src/index.ts"]
     }
   },

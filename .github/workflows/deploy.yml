@@ -30,15 +30,27 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build
+      - name: Build MUI demo
         run: npm run build
         env:
           GITHUB_ACTIONS: true
 
+      - name: Build DaisyUI demo
+        run: npm run build:daisyui
+        env:
+          GITHUB_ACTIONS: true
+
+      - name: Assemble site
+        run: |
+          mkdir -p dist/site
+          cp -r dist/apps/demo/* dist/site/
+          mkdir -p dist/site/daisyui
+          cp -r dist/apps/demo-daisyui/* dist/site/daisyui/
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/apps/demo
+          path: dist/site
 
   deploy:
     environment:

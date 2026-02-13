@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import tailwindcss from '@tailwindcss/vite';
 import path from 'path';
 
 /** Shared path aliases for all @code-framez packages */
@@ -22,18 +23,18 @@ function codeFramezAliases(dir: string) {
 }
 
 export default defineConfig({
-  plugins: [react()],
-  root: 'apps/demo',
-  base: process.env.GITHUB_ACTIONS ? '/code-framez/' : '/',
+  plugins: [react(), tailwindcss()],
+  root: 'apps/demo-daisyui',
+  base: process.env.GITHUB_ACTIONS ? '/code-framez/daisyui/' : '/',
   resolve: {
     alias: codeFramezAliases(__dirname),
   },
   server: {
-    port: 4200,
+    port: 4201,
     host: true,
   },
   build: {
-    outDir: '../../dist/apps/demo',
+    outDir: '../../dist/apps/demo-daisyui',
     emptyOutDir: true,
   },
 });

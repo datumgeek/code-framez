@@ -5,8 +5,12 @@
   "private": true,
   "scripts": {
     "dev": "vite",
+    "dev:daisyui": "vite --config vite.config.daisyui.ts",
     "build": "vite build",
+    "build:daisyui": "vite build --config vite.config.daisyui.ts",
+    "build:all": "vite build && vite build --config vite.config.daisyui.ts",
     "preview": "vite preview",
+    "preview:daisyui": "vite preview --config vite.config.daisyui.ts",
     "typecheck": "tsc --noEmit -p tsconfig.base.json"
   },
   "repository": {
@@ -38,9 +42,12 @@
     "@emotion/styled": "^11.14.1",
     "@mui/icons-material": "^7.3.8",
     "@mui/material": "^7.3.8",
+    "@tailwindcss/vite": "^4.1.18",
+    "daisyui": "^5.5.18",
     "immer": "^11.1.4",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
+    "tailwindcss": "^4.1.18",
     "uuid": "^13.0.0",
     "zustand": "^5.0.11"
   }

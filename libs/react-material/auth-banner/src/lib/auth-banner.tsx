@@ -1,5 +1,5 @@
 /**
- * @code-framez/auth/react - Auth Banner Component
+ * @code-framez/react-material/auth-banner
  *
  * MUI-based auth UI component that shows login/logout
  * and user info in the shell toolbar.
@@ -19,8 +19,7 @@ import Divider from '@mui/material/Divider';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import LoginIcon from '@mui/icons-material/Login';
 import LogoutIcon from '@mui/icons-material/Logout';
-import PersonIcon from '@mui/icons-material/Person';
-import { useAuth } from './auth-provider';
+import { useAuth } from '@code-framez/auth/react';
 
 export function AuthBanner() {
   const { state, user, isLoading, login, logout } = useAuth();

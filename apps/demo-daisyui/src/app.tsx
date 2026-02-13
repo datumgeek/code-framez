@@ -1,21 +1,21 @@
 /**
- * Code Framez Demo Application
+ * Code Framez DaisyUI Demo Application
  *
- * Demonstrates the full platform capabilities:
+ * Demonstrates the full platform capabilities using DaisyUI + Tailwind CSS:
  * - Multi-pane layout (nav, main, search, right, bottom)
  * - View component registry and dynamic launching
  * - Entity navigation / context menus
  * - Auth framework with mock adapter
- * - MUI-based shell components
+ * - DaisyUI-based shell components
  */
 
 import React, { useMemo } from 'react';
 import type { ViewComponentRegistration } from '@code-framez/core/types';
 import type { ViewComponentMap } from '@code-framez/react/view-host';
-import { Shell } from '@code-framez/react-material/shell';
-import type { ShellConfig } from '@code-framez/react-material/shell';
+import { Shell } from '@code-framez/react-daisyui/shell';
+import type { ShellConfig } from '@code-framez/react-daisyui/shell';
 import { AuthProvider, MockAuthAdapter } from '@code-framez/auth/react';
-import { AuthBanner } from '@code-framez/react-material/auth-banner';
+import { AuthBanner } from '@code-framez/react-daisyui/auth-banner';
 
 // ─── View Components ─────────────────────────────────────────
 import { WelcomeDashboard } from './views/welcome-dashboard';
@@ -139,7 +139,8 @@ export function App() {
   const shellConfig = useMemo<ShellConfig>(
     () => ({
       title: 'Code Framez',
-      subtitle: 'Component Shell Platform',
+      subtitle: 'DaisyUI Demo',
+      daisyTheme: 'night',
       views: viewRegistrations,
       componentMap,
       authComponent: <AuthBanner />,

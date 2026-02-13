@@ -1,0 +1,18 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "../../dist/apps/demo-daisyui"
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "references": [
+    { "path": "../../libs/core/types" },
+    { "path": "../../libs/core/auth-types" },
+    { "path": "../../libs/react/state" },
+    { "path": "../../libs/react/view-host" },
+    { "path": "../../libs/react-daisyui/pane" },
+    { "path": "../../libs/react-daisyui/entity-menu" },
+    { "path": "../../libs/react-daisyui/shell" },
+    { "path": "../../libs/react-daisyui/auth-banner" },
+    { "path": "../../libs/auth/react" }
+  ]
+}
